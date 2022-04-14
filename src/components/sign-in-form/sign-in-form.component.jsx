@@ -27,7 +27,7 @@ const SignInForm = () => {
     await signInWithGooglePopup();
   };
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
@@ -38,7 +38,7 @@ const SignInForm = () => {
     }
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormFields({ ...formFields, [name]: value });
@@ -68,11 +68,7 @@ const SignInForm = () => {
         />
         <div className='buttons-container'>
           <Button type='submit'>Sign In</Button>
-          <Button
-            buttonType='google'
-            type='button'
-            onClick={signInWithGoogle}
-          >
+          <Button buttonType='google' type='button' onClick={signInWithGoogle}>
             Sign In With Google
           </Button>
         </div>
