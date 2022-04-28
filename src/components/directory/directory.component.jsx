@@ -38,7 +38,7 @@ const categories = [
 const Directory = () => {
   return (
     <DirectoryContainer>
-      {categories.map(category => (
+      {categories.map((category) => (
         <DirectoryItem key={category.id} category={category} />
       ))}
     </DirectoryContainer>
