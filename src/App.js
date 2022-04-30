@@ -17,7 +17,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChangedListener((user) => {
+    const unsubscribe = onAuthStateChangedListener(user => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
@@ -26,7 +26,8 @@ const App = () => {
     });
 
     return unsubscribe;
-  }, [dispatch]);
+  }, []);
+
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
